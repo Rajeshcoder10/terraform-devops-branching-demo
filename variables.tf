@@ -1,6 +1,11 @@
-# 1. Basic string variable with a default value
 variable "aws_region" {
+  description = "The AWS region to deploy resources into"
   type        = string
-  description = "The target AWS region for resource deployment."
   default     = "us-east-1"
+}
+
+variable "instance_type" {
+  description = "The size of the EC2 instance"
+  type        = string
+  default     = "t2.micro"
 }
