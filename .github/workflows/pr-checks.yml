@@ -29,3 +29,11 @@ jobs:
 
       - name: Terraform Validate
         run: terraform validate
+
+      - name: Setup TFLint
+        uses: terraform-linters/setup-tflint@v5
+
+      - name: Run TFLint
+        run: |
+          tflint --init
+          tflint
